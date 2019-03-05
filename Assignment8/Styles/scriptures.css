@@ -1,0 +1,8 @@
+﻿html * {
+    font-family: 'Poppins', sans-serif;
+}
+
+.validation-message {
+    width: 100%;
+    color: firebrick;
+}

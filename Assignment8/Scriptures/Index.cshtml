@@ -1,0 +1,49 @@
+﻿@using MyScriptureJournal.Classes
+@{
+    Layout = "~/Shared/_Layout.cshtml";
+    Page.Title = "Scriptures";
+
+    var keyword = Request.QueryString["searchKeyword"];
+    var book = Request.QueryString["searchBook"];
+
+    var rows = ScripturesDataHelper.Search(book, keyword);
+
+    var grid = new WebGrid(source: rows, rowsPerPage: 5, sortFieldName: "Date");
+    var specificColumns = grid.Columns(
+        grid.Column("Book"),
+        grid.Column("Chapter"),
+        grid.Column("Verse"),
+        grid.Column("Note"),
+        grid.Column("Date"),
+        grid.Column(columnName: "Actions", format:
+@<div>
+    <a href="~/Scriptures/Edit?id=@item.ID"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+    <a href="~/Scriptures/Delete?id=@item.ID"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+</div>)
+);
+}
+
+@Html.ValidationSummary()
+<div id="scriptures-list" class="col-lg-12 order-md-1">
+    <h4>Filter</h4>
+    <form method="GET">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <input type="text" class="form-control" name="searchBook" value="@Request.QueryString["searchBook"]" placeholder="Book.">
+            </div>
+            <div class="col-md-3 mb-3">
+                <input type="text" class="form-control" name="searchKeyword" value="@Request.QueryString["searchKeyword"]" placeholder="Keyword.">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <button style="margin-top:2%" class="btn btn-info" type="submit">Search</button>
+                <a style="margin-top:2%; color:white" class="btn btn-primary" href="~/Scriptures/Create">Add ></a>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="col-lg-12">
+    @grid.GetHtml(tableStyle: "table", columns: specificColumns)
+</div>
+

@@ -1,0 +1,48 @@
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\Assignment7.dll.config
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\Assignment7.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\Assignment7.pdb
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Data.SqlServerCe.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.Helpers.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.Razor.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.WebPages.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.WebPages.Razor.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\WebMatrix.Data.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\WebMatrix.WebData.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.Helpers.xml
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.Razor.xml
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.WebPages.xml
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\System.Web.WebPages.Razor.xml
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\WebMatrix.Data.xml
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\bin\WebMatrix.WebData.xml
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\obj\Debug\MyScriptureJournal.csprojAssemblyReference.cache
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\obj\Debug\MyScriptureJournal.csproj.CoreCompileInputs.cache
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\obj\Debug\MyScriptureJournal.csproj.CopyComplete
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\obj\Debug\Assignment7.dll
+C:\Users\hardp\Documents\GitHub\My Scripture Journal\Assignment8\obj\Debug\Assignment7.pdb
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\Assignment7.dll.config
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\Assignment7.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\Assignment7.pdb
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Data.SqlServerCe.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.Helpers.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.Razor.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.WebPages.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.WebPages.Razor.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\WebMatrix.Data.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\WebMatrix.WebData.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.Helpers.xml
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.Razor.xml
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.WebPages.xml
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\System.Web.WebPages.Razor.xml
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\WebMatrix.Data.xml
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\bin\WebMatrix.WebData.xml
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\obj\Debug\MyScriptureJournal.csprojAssemblyReference.cache
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\obj\Debug\MyScriptureJournal.csproj.CoreCompileInputs.cache
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\obj\Debug\MyScriptureJournal.csproj.CopyComplete
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\obj\Debug\Assignment7.dll
+C:\Users\hardp\Documents\GitHub\My-Scripture-Journal\Assignment8\obj\Debug\Assignment7.pdb

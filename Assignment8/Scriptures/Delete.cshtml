@@ -1,0 +1,15 @@
+﻿@using MyScriptureJournal.Classes
+@{
+    var scriptureId = string.Empty;
+
+    if (Request.QueryString["ID"].IsEmpty() || !Request.QueryString["ID"].IsInt())
+    {
+        Response.Redirect("~/Shared/_Layout.cshtml");
+    }
+
+    scriptureId = Request.QueryString["ID"];
+
+    ScripturesDataHelper.Delete(scriptureId);
+
+    Response.Redirect("~/Scriptures?sucessDelete=true");
+}

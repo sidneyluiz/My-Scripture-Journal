@@ -1,0 +1,112 @@
+﻿@using MyScriptureJournal.Classes
+@{
+    Layout = "~/Shared/_Layout.cshtml";
+    Page.Title = "Edit Scripture";
+
+    var searchKeyword = string.Empty;
+    var book = string.Empty;
+    var chapter = 0;
+    var verse = 0;
+    var note = string.Empty;
+    var date = string.Empty;
+    var scriptureId = string.Empty;
+
+    if (!IsPost)
+    {
+        if (!Request.QueryString["ID"].IsEmpty() && Request.QueryString["ID"].IsInt())
+        {
+            scriptureId = Request.QueryString["ID"];
+            var row = ScripturesDataHelper.GetByID(scriptureId);
+
+            if (row != null)
+            {
+                book = row.Book;
+                chapter = row.Chapter;
+                verse = row.Verse;
+                note = row.Note;
+                date = row.Date.ToString();
+            }
+            else
+            {
+                Validation.AddFormError("No scripture was selected.");
+                Response.Redirect("~/Scriptures");
+            }
+        }
+        else
+        {
+            Validation.AddFormError("No scripture was selected.");
+            Response.Redirect("~/Scriptures");
+        }
+    }
+
+    if (IsPost)
+    {
+        Validation.RequireField("book", "You must enter a book");
+        Validation.RequireField("chapter", "Chapter is required");
+        Validation.RequireField("verse", "Verse is required");
+        Validation.RequireField("note", "Note is required");
+        Validation.RequireField("scriptureId", "No scripture ID was submitted!");
+
+        book = Request.Form["book"];
+        chapter = Request.Form["chapter"].AsInt();
+        verse = Request.Form["verse"].AsInt();
+        note = Request.Form["note"];
+        scriptureId = Request.Form["scriptureId"];
+
+        if (Validation.IsValid())
+        {
+            ScripturesDataHelper.Update(scriptureId, book, chapter, verse, note);
+            Response.Redirect("~/Scriptures?sucessUpdate=true");
+        }
+    }
+}
+<div class="col-lg-12 order-md-1">
+    <p><a href="~/Scriptures">< Return to scripture listing</a></p>
+    @Html.ValidationSummary()
+    <form class="needs-validation" method="POST" novalidate>
+        <input type="hidden" class="form-control" name="scriptureId" value="@scriptureId">
+        <div class="row">
+            <div class="col-md-1 mb-3">
+                <label>Id</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" value="@scriptureId" disabled>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="book">Book</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="book" value="@book" placeholder="Book" required>
+                    <div class="validation-message">
+                        @Html.ValidationMessage("book")
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="chapter">Chapter</label>
+                <input type="number" class="form-control" name="chapter" value="@chapter" placeholder="Chapter" required>
+                <div class="validation-message">
+                    @Html.ValidationMessage("chapter")
+                </div>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="date">Verse</label>
+                <input type="number" class="form-control" name="verse" value="@verse" placeholder="Verse" required>
+                <div class="validation-message">
+                    @Html.ValidationMessage("verse")
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mb-3">
+                <label for="note">Note</label>
+                <textarea class="form-control" style="height: 160px;" name="note" placeholder="Note" required>@note</textarea>
+                <div class="validation-message">
+                    @Html.ValidationMessage("note")
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <button style="margin-top:20%" class="btn btn-primary" type="submit">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

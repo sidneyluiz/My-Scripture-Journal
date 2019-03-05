@@ -1,0 +1,72 @@
+﻿@using MyScriptureJournal.Classes
+@{
+    Layout = "~/Shared/_Layout.cshtml";
+    Page.Title = "Create Scripture";
+
+    var book = string.Empty;
+    var chapter = string.Empty;
+    var verse = string.Empty;
+    var note = string.Empty;
+    var date = string.Empty;
+
+    Validation.RequireField("book", "You must enter a book");
+    Validation.RequireField("chapter", "Chapter is required");
+    Validation.RequireField("verse", "Verse is required");
+    Validation.RequireField("note", "Note is required");
+
+    if (IsPost && Validation.IsValid())
+    {
+        book = Request.Form["book"];
+        chapter = Request.Form["chapter"];
+        verse = Request.Form["verse"];
+        note = Request.Form["note"];
+
+        ScripturesDataHelper.Insert(book, chapter.AsInt(), verse.AsInt(), note);
+
+        Response.Redirect("~/Scriptures?sucessCreate=true");
+    }
+}
+<div id="new-scripture" class="col-lg-12 order-md-1">
+    <p><a href="~/Scriptures">< Return to scripture listing</a></p>
+    <h4>New Scripture</h4>
+    <form class="needs-validation" method="POST" novalidate>
+
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label>Book</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="book" value="@Request.Form["book"]" placeholder="Book" required>
+                    <div class="validation-message">
+                        @Html.ValidationMessage("book")
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label>Chapter</label>
+                <input type="number" class="form-control" name="chapter" value="@Request.Form["chapter"]" placeholder="Chapter" required>
+                <div class="validation-message">
+                    @Html.ValidationMessage("chapter")
+                </div>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label>Verse</label>
+                <input type="number" class="form-control" name="verse" value="@Request.Form["verse"]" placeholder="Verse" required>
+                <div class="validation-message">
+                    @Html.ValidationMessage("number")
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 mb-3">
+                <label>Note</label>
+                <textarea class="form-control" name="note" value="@Request.Form["note"]" placeholder="Note" required></textarea>
+                <div class="validation-message">
+                    @Html.ValidationMessage("note")
+                </div>
+            </div>
+            <div class="col-md-2 mb-3">
+                <button style="margin-top:20%" class="btn btn-primary" type="submit">Add</button>
+            </div>
+        </div>
+    </form>
+</div>
